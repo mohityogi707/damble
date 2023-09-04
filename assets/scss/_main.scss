@@ -1,0 +1,82 @@
+
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: rgba(#aab7cf, 0);
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 2px;
+  background-color: rgba(#aab7cf, 0);
+  // background-color: red;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aab7cf;
+}
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden auto;
+  background-color: #0D131C;
+}
+
+
+.borderd{
+  opacity: 0.5;
+  background: rgba(147, 172, 211, 0.50);
+  height: 1px;
+}
+
+
+.modal{
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+}
+.modal-backdrop.show {
+  display: none;
+}
+
+
+.spinnerGroup {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  & .circleImg {
+    transition: all 1s ease-in-out;
+    transform: rotate(var(--rotate));
+  }
+  & .spinBtn {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
+  }
+  & .sideicon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4px;
+  }
+
+}
+
+.form-control , .form-select{
+  &:focus-visible{
+      border-color: $theme1;
+  }
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+      -webkit-text-fill-color: #B2B6C5;
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-background-origin: unset;
+      caret-color: #B2B6C5;
+  }
+}

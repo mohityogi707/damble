@@ -1,0 +1,3590 @@
+// login & resister modal start 
+.loginModal {
+    & .logindialog {
+        height: 90%;
+        // max-width: 90%;
+        & .loginContent {
+            background-color: #0D131C;
+            & .header {
+                & .logoimg {
+                    height: 20px;
+                    & img {
+                        object-fit: contain;
+                    }
+                }
+            }
+            & .btnClose {
+                background: none;
+                height: 18px;
+                width: 18px;
+                right: 15px;
+                top: 15px;
+                opacity: 0.7;
+                z-index: 6;
+                &:hover{
+                    opacity: 1;
+                }
+                &.smbtnClose {
+                    height: 13px;
+                    width: 13px;
+                }
+            }
+            & .loginformMain {
+                background: #161A25;
+                & .logindata {
+                    padding: 58px 17px 68px 36px;
+                    & .loginBtn {
+                        border-radius: 10px;
+                        background: #1A1E2B;
+                        color: #FFFFFF;
+                        text-shadow: 0px 4px 30px rgba(204, 255, 0, 0.30);
+                        font-size: 13px;
+                        font-weight: 800;
+                        padding: 13px 28px;
+                        &.active {
+                            color: #E8FE90;
+                        }
+                    }
+                    & .loginbutton {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 2;
+                        & .directLogin {
+                            color: #B2B6C5;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            background: #161A25;
+                            padding: 0px 13px;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 0.7px;
+                            background: #CF0;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            z-index: -1;
+                        }
+                    }
+                    & .link{
+                        border-radius: 3px;
+                        border: 0.6px solid #B2B6C5;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        & img{
+                            width: 14px;
+                            height: 14px;
+                            object-fit: contain;
+                        }
+                    }
+                    & .selectCountry {
+                        font-size: 12px;
+                        color: #B2B6C5;
+                        font-size: 12px;
+                        font-weight: 500;
+                        outline: none;
+                        & option {
+                            background-color: #161A25;
+                        }
+                    }
+                }
+                & .tabdata {
+                    padding-top: 67px;
+                }
+            }
+            & .loginImg  {
+                // background:url(../Img/sidebar/loginpage.png);
+                // background-position:  bottom right;
+                background-color: #161A25;
+                // background-size: cover;
+                // background-repeat: no-repeat;
+                // background-image:url(../Img/login_bg1.svg);
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    background-image:url(../Img/loginBgShap.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: bottom right;
+                    z-index: 1;
+                }
+                &::before{
+                    content: '';
+                    // background: linear-gradient(180deg, rgba($black, 0.8) 5%, rgba($black, 0) 100%);
+                    background-color: rgba(#0D131C, 0.9);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    z-index: 2;
+                }
+                & .innerimages {
+                    position: relative;
+                    z-index: 5;
+                    & .mainHeading {
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+                    & .subheading {
+                        color: #B2B6C5;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        text-transform: uppercase;
+                    }
+                    & .logo {
+                        height: 43.048px;
+                    }
+                }
+            }
+        }
+    }
+}
+.inputdata {
+    & .inputLabel {
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 800;
+        line-height: normal;
+        & span {
+            color: #E94242;
+            font-size: 15px;
+            font-weight: 800;
+        }
+    }
+    & .inputlogin {
+        background-color: #13161F;
+        margin-top: 8px;
+        color: #B2B6C5;
+        font-size: 12px;
+        font-weight: 500;
+        height: 41px;
+        &::placeholder {
+            color: #B2B6C5;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    &.passwordInput {
+        padding-top: 33px;
+    }
+    &.forgotmain {
+        padding: 13px 0 10px 0;
+        & .forgotPassword {
+            color: #B2B6C5;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    & .passwordGroup {
+        & .eye {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15px;
+            width: 25px;
+            & img {
+                object-fit: contain;
+            }
+            &.active {
+                    opacity: 1;
+                    visibility: visible;
+            }
+        }
+        & .open, & .close {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    & .form-check {
+        & .form-check-label{
+            cursor: pointer;
+        }
+        & .form-check-input {
+            min-width: 15px;
+            min-height: 15px;
+            border-radius: 15px;
+            border: 0px;
+            position: relative;
+            background: rgba($white, 0.9);
+            &::before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-position: center;
+                background: url(../img/newIcon/correct.svg) no-repeat center;
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            &:checked{
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}
+// login & resister modal end 
+
+// profile tab page start 
+.accountTab {
+    padding: 49px 90px 60px 90px ;
+    & .tabMain {
+        gap: 12px;
+        & .accountBtn {
+            background: #161A25;
+            border-radius: 9px;
+            border: none;
+            color: #FFF;
+            font-size: 15px;
+            font-weight: 600;
+            gap: 20px;
+            padding: 11px 0 11px 17px;
+            border: 1px solid #161A25;
+            // transition: all 0.3s ease-in-out;
+            & .accounttabIcon {
+                height: 21px;
+                width: 21px;
+                & img {
+                    filter: grayscale(1);
+                    // transition: all 0.3s ease-in-out;
+                }
+            }
+            &.active {
+                border-color: #CF0;
+                & .accounttabIcon {
+                    & img {
+                        filter: none;
+                    }
+                }
+            }
+            &:hover {
+                border-color: #CF0;
+                & .accounttabIcon {
+                    & img {
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+    & .accountTabcard {
+        border-radius: 9px;
+        background: #161A25;
+        padding: 35px 25px 45px;
+        & .cardImg {
+            height: 25px;
+            width: 25px;
+            & img {
+                filter: grayscale(1);
+            }
+        }
+        & .accountCardHeading {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 800;
+            gap: 17px;
+            line-height: normal;
+        }
+        & .cardsubHeading {
+            color: #FFF;
+            font-size: 15px;
+            padding-top: 40px;
+            font-weight: 800;
+            & span {
+                height: 19px;
+                width: 19px;
+            }
+            &.disabled {
+                color: #B2B6C5;
+            }
+        }
+        & .accountInput {
+            padding-top: 20px;
+            & .accountLabel {
+                color: #B2B6C5;
+                font-size: 10px;
+                font-weight: 700;
+                line-height: normal;
+                & span {
+                    color: #FFD700;
+                }
+            }
+            & .inputmain {
+                padding-top: 8px;
+                gap: 15px;
+                & .userNameInput {
+                    border-radius: 9px;
+                    background: #13161F;
+                    color: #B2B6C5;
+                    font-size: 10px;
+                    font-weight:700;
+                    height: 38px;
+                    &::placeholder {
+                        color: #B2B6C5;
+                        font-size: 10px;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+                & .customBtn {
+                    color: #000;
+                    font-size: 13px;
+                    font-weight: 700;
+                    padding: 3px 18px;
+                    border-radius: 5px;
+                }
+            }
+        }
+        & .privateProfile {
+            gap: 18px;
+            & .checkLabel {
+                color: #B2B6C5;
+                font-size: 13px;
+                font-weight: 700;
+            }
+        }
+        & .totalWallet {
+            color: #B2B6C5;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            & span {
+                color: #CF0;
+            }
+        }
+        & .mainCard {
+            border-radius: 9px;
+            background: #13161F;
+            padding: 14px 0 19px 39px;
+            & .mainHeading {
+                color: #FFF;
+                font-size: 13px;
+                font-weight: 800;
+                line-height: normal;
+            }
+            & .CoinIcon {
+                height: 17px;
+                width: 17px;
+            }
+        }
+        & .customBtn {
+            color: #000;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        & .reffralsTab {
+            & .refferalBtn {
+                border-radius: 9px;
+                background: #272B36;
+                padding: 5px 20px;
+                color: #B2B6C5;
+                font-size: 13px;
+                font-weight: 800;
+                border: 1px solid #272B36;
+                &.active {
+                    border-color: #CF0;
+                    color: #FFF;
+                }
+            }
+        }
+        & .setcodeCard {
+            & .setCodetitle {
+                color: #B2B6C5;
+                font-size: 15px;
+                font-weight: 800;
+                line-height: normal;
+            }
+        }
+        & .reffralsCard {
+            border-radius: 9px;
+            background: #272B36;
+            padding: 20px 0 ;
+            & .totalComission {
+                color: #FFF;
+                font-size: 17px;
+                font-weight: 800;
+                line-height: normal;
+            }
+            & .Comission {
+                color: #FFF;
+                font-size: 15px;
+                font-weight: 800;
+                line-height: normal;
+                padding-top: 10px;
+            }
+        }
+        & .affiliateTable {
+            border-collapse:separate;
+            border-spacing:0 8px;
+            & .tableHead {
+                border-radius: 9px;
+                background: #272B36;
+                & th {
+                    color: #B2B6C5;
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+            & .tablebody {
+                & tr {
+                    background: #272B36;
+                    & td {
+                        color: #FFF;
+                        font-size: 13px;
+                        font-weight: 800;
+                        line-height: normal;
+                    }
+                }
+                & .claimBtn {
+                    color: #000;
+                    font-size: 12px;
+                    padding: 4px 7px;
+                    font-weight: 800;
+                    line-height: normal;
+                    border-radius: 4px;
+                    background: #CF0;
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: 0px 4px 20px 0px #CBFD00 inset, 0px 4px 30px 0px rgba(204, 255, 0, 0.30);
+                    &:hover {
+                        background: rgba(204, 255, 0, 0.635);
+                    }
+                }
+                & .copyBtn {
+                    color: #7E96BA;
+                    font-size: 10px;
+                    font-weight: 700;
+                    line-height: normal;
+                    padding: 4px 10px;
+                    border-radius: 4px;
+                    background: #161A25;
+                }
+            }
+        }
+        ::-webkit-scrollbar-track {
+            // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            background: #0D131C;
+        }
+        ::-webkit-scrollbar {
+            width: 2px;
+            height: 6px;
+            border-radius: 5px;
+            background: #CF0;
+            // background-color: red;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #CF0;
+        }
+        & .affiliateCardTitle {
+            color: #B2B6C5;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: normal;
+            & .affliateProgram {
+                color: #CF0;
+            }
+        }
+        & .NoEntry {
+            color: #B2B6C5;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: normal;
+            border-radius: 9px;
+            background: #13161F;
+            padding: 20px 25px;
+        }
+        & .transactionCard {
+            & .card-header {
+                background: #1D2230;
+                padding: 15px 25px;
+                border-radius: 9px 9px 0 0 ;
+                & .transactionLabel {
+                    color: #FFF;
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: normal;
+                }
+                & .transactionInput {
+                    color: #B2B6C5;
+                    font-size: 10px;
+                    font-weight: 700;
+                    border-radius: 9px;
+                    border: 1px solid #CF0;
+                    background: #13161F;
+                    box-shadow: 0px 4px 10px 0px rgba(204, 255, 0, 0.10);
+                    margin-top: 12px;
+                    padding: 8px 16px;
+                    &::placeholder {
+                        color: #B2B6C5;
+                        font-size: 10px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            & .cardBody {
+                padding: 20px 25px 30px;
+                border-radius: 0px 0px 9px 9px;
+                background: #13161F;
+                & .cancelBtn {
+                    border-radius: 5px;
+                    background: #161A25;
+                    color: #B2B6C5;
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: normal;
+                    padding: 9px 18px;
+                }
+            }
+        }
+        & .inputGroup{
+            & .EmailInput {
+                border: 2px solid #13161F;
+                border-radius: 9px;
+                background: #13161F;
+                transition: border 0.25s ease-in-out;
+                padding: 10px 16px;
+                color: #B2B6C5;
+                font-size: 10px;
+                font-weight: 700;
+                &:focus {
+                    outline: none;
+                    border-color: #CF0;
+                }
+                
+            }
+            & .emailLabel {
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                transition: all 0.25s ease-in-out;
+                color: #B2B6C5;
+                font-size: 10px;
+                font-weight: 700;
+                & span {
+                    color: #FFD700;
+                }
+            }
+        }
+        & .EmailInput:focus ~ .emailLabel {
+            top: 0;
+            // background-color: #f8f8f8;
+            // font-size: 14px;
+            padding: 0 10px;
+            background: linear-gradient(180deg, rgba(22,26,37,1) 49%, rgba(19,22,31,1) 52%);
+        }
+        & .changeGmailBtn {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-radius: 5px;
+        }
+    }
+}
+// profile tab page end 
+
+// bank modal start 
+.bankModal {
+    & .bankdialog {
+        max-width: 672px;
+        & .bankContent {
+            background-color: #161A25;
+            // padding:20px 42px 45px;
+            & .bankHeader {
+                padding: 20px 42px 15px;
+                & .btn-close {
+                    background: none;
+                    height: 13px;
+                    width: 13px;
+                }
+                & .bankTab {
+                    gap: 9px;
+                    & .bankBtn {
+                        border-radius: 5px;
+                        background: #0D131C;
+                        color: #FFF;
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: normal;
+                        padding: 7px 42px;
+                        &.active {
+                            border: 0.5px solid #E7FF87;
+                            box-shadow: 0px 4px 20px 0px rgba(204, 255, 0, 0.20) inset;
+                        }
+                        &:hover {
+                            border: 0.5px solid #E7FF87;
+                            box-shadow: 0px 4px 20px 0px rgba(204, 255, 0, 0.20) inset;
+                        }
+                    }
+
+                }
+            }
+            & .bankbody {
+                padding: 20px 42px 45px;
+            }
+            & .banktabContent {
+                // padding-top: 27px;
+                & .cryptoTab {
+                    & .cryptotabBtn {
+                        color: #FFF;
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: normal;
+                        background-color: #0D131C;
+                        border-radius: 5px;
+                        transition: all 0.3s ease-in-out;
+                        padding: 9px 25px;
+                        &.active {
+                            background: #D7FF33;
+                            box-shadow: 0px 4px 20px 0px rgba(204, 254, 0, 0.30);
+                            color: #000;
+                        }
+                        &:hover {
+                            background: #D7FF33;
+                            box-shadow: 0px 4px 20px 0px rgba(204, 254, 0, 0.30);
+                            color: #000;
+                        }
+                    }
+                }
+                & .cryptoContent {
+                    padding-top: 40px;
+                }
+                & .cryptoHeading {
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 18px;
+                    color: #FFFFFF;
+                }
+                & .usdtBtn {
+                    gap: 6px;
+                    color: #FFF;
+                    font-size: 10px;
+                    font-weight: 600;
+                    line-height: normal;
+                    border-radius: 5px;
+                    background: #252E39;
+                    padding: 5px 10px;
+                    & .usdtIcon {
+                        width: 13px;
+                        height: 11px;
+                    }
+                }
+                & .btcdropDown {
+                    & .dropDownBtn {
+                        color: #FFF;
+                        font-size: 13px;
+                        font-weight: 800;
+                        line-height: normal;
+                        border-radius: 5px;
+                        background: #0D131C;
+                        padding: 7px 14px;
+                        border: 1px solid #0D131C;
+                        &.network {
+                            padding: 11px 14px;
+                        }
+                        & .dropDownBtnInner {
+                            font-size: 20px;
+                        }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 14px;
+                            height: 15px;
+                            width: 8px;
+                            background: url(../Img/sidebar/rightarrow.png) no-repeat;
+                            background-position: center;
+                            background-size:cover;
+                            border: none;
+                        }
+                        &.buycryptoTab {
+                            padding: 16px 14px;
+                            &::after {
+                                width: 15px;
+                                height: 8px;
+                                background: url(../Img/sidebar/downarrow.png) no-repeat;
+                                background-position: center;
+                                background-size:cover;
+                            }
+                        }
+                        &.show {
+                            border-color: #CF0;
+                        }
+                        & .bitcoinIcon {
+                            width: 23px;
+                            height: 23px;
+                        }
+                    }
+                    & .btcdropmenu {
+                        background-color: #0D131C;
+                        // top: 5px !important;
+                        & .btcInner {
+                            color: #FFF;
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: normal;
+                            border-radius: 5px;
+                            background: #0D131C;
+                            padding: 7px 14px;
+                            border: 1px solid #0D131C;
+                            &:hover {
+                                background-color: #161A25;
+                            }
+                            & .selectIcon {
+                                width: 23px;
+                                height: 23px;
+                            }
+                            
+                        }
+                    }
+                }
+                & .bankmodalsubheading {
+                    color: #FFF;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+                & .bonusTitle {
+                    color: #FFF;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: normal;
+                    padding-top: 13px;
+                    & .infoImg {
+                        height: 11px;
+                        min-width: 11px;
+                        max-width: 11px;
+                    }
+                }
+                & .depositCard {
+                    & .qrImg {
+                        // aspect-ratio: 5/5;
+                        height: 130px;
+                        width: 130px;
+                    }
+                    & .depositAddress {
+                        color: #B2B6C5;
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    & .depositcardTitle {
+                        color: #B2B6C5;
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: normal;
+                        & span {
+                            color: #FFD700;
+                            font-weight: 700;
+                        }
+                    }
+                    & .copyAddressmain {
+                        border-radius: 5px;
+                        background: #0D131C;
+                        padding: 7px;
+                        & .addressInput {
+                            color: #B2B6C5;
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                      
+                    }
+                    & .infoIcon {
+                        height: 13px;
+                        width: 13px;
+                    }
+                }
+                & .playbtntwo {
+                    & .playBtnInner {
+                        height: 28px;
+                        font-size: 10px;
+                        padding: 0 10px;
+                    }
+                }
+                & .eurIcon {
+                    height: 19px;
+                    width: 19px;
+                }
+                & .btcValue {
+                    background: #0D131C;
+                    border-radius: 5px;
+                    padding:6px 0;
+                    & .btcLabel {
+                        color: #FFF;
+                        font-size: 10px;
+                        font-weight: 800;
+                        line-height: normal;
+                    }
+                    & .btcInput {
+                        color: #B2B6C5;
+                        font-size: 10px;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                    // background: #0D131C;
+                    // padding: 11px 12px;
+                    & .btcvalueImg {
+                        height: 16px;
+                        width: 16px;
+                    }
+                }
+                & .Equal {
+                    color: #FFF;
+                    font-size: 10px;
+                    font-weight: 800;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+                & .btnvaluetitle {
+                    color: rgba(255, 255, 255, 0.80);
+                    font-size: 10px;
+                    font-weight: 600;
+                    line-height: normal;
+                    padding-top: 13px;
+                }
+                & .eurdropDown {
+                    & .eurBtn {
+                        color: #FFF;
+                        font-size: 13px;
+                        font-weight: 800;
+                        line-height: normal;
+                        border-radius: 5px;
+                        background: #0D131C;
+                        gap: 5px;
+                        padding: 9px 32px 9px 9px;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 10px;
+                            height: 7px;
+                            width: 13px;
+                            background: url(../Img/sidebar/downarrow.png) no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            border: none;
+                        }
+                        &.show {
+                            border-color: #CBFD00;
+                        }
+                        &:active {
+                            border-color: #CBFD00;
+                        }
+                    }
+                    & .eurMenu {
+                        background-color: #13161F;
+                        min-width: 94px;
+                        & .eurBtnInner {
+                            color: #FFF;
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: normal;
+                            gap: 7px;
+                            padding: 6px 11px;
+                            &:hover {
+                                background-color: #1A1E2B;
+                            }
+                        }
+                    }
+                }
+                & .eurExtra {
+                    padding: 18px 21px;
+                    border-radius: 5px;
+                    background: #0D131C;
+                    & .eurtitle {
+                        color: #FFF;
+                        font-size: 15px;
+                        font-weight: 600;
+                        line-height: normal;
+                        &.eurtitletwo {
+                            font-weight:500;
+                            color: #CCFF00;
+                        }
+                    }
+                }
+                & .eurCard {
+                    color: #FFF;
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: normal;
+                    border-radius: 5px;
+                    background: #0D131C;
+                    padding: 16px 0;
+                    border: 1px solid #0D131C;
+                    &.active {
+                        border-color:  #D7FF33;
+                        box-shadow: 0px 4px 20px 0px rgba(204, 255, 0, 0.10);
+                    }
+                    & .eurCardTitle {
+                        color: #070707;
+                        font-size: 8px;
+                        font-weight: 700;
+                        border-radius: 0px 5px;
+                        background: #CF0;
+                        padding: 2px 11px;
+                        line-height: normal;
+                    }
+                }
+                & .receivingLabel {
+                    color: #FFF;
+                    font-size: 10px;
+                    font-weight: 800;
+                    line-height: normal;
+                    padding-top: 33px;
+                    & .receivingStar {
+                        color: #D3F93A;
+                    }
+                    & .withdrawalStar {
+                        color: #72F236;
+                    }
+                }
+                & .receivingInput {
+                    color: #B2B6C5;
+                    font-size: 10px;
+                    font-weight: 600;
+                    line-height: normal;
+                    border-radius: 5px;
+                    background: #0D131C;
+                    padding: 12px 16px;
+                    &::placeholder {
+                        color: #B2B6C5;
+                        font-size: 10px;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+                & .networkFee {
+                    color: #FFF;
+                    font-size: 10px;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+                & .inputdata {
+                    & .forgotPassword {
+                        color: #B2B6C5;
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                    & a {
+                        color: #B2B6C5;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.disclaimerCard {
+    border-radius: 9px;
+    background: #161A25;
+    box-shadow: 0px 5px 1px 0px rgba(0, 0, 0, 0.30);
+    // padding:20px;
+    & .disclaimerheading {
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: normal;
+        &.disclaimerDetail {
+            font-size: 14px;
+            color: #B2B6C5;
+        }
+    }
+}
+.disclaimerModal {
+    & .disclaimerdialog {
+        max-width: 450px;
+        & .disclaimerHeader {
+            padding: 20px 20px 0;
+            & .closebtn {
+                background: none;
+                height: 13px;
+                width: 13px;
+            }
+        }
+        & .disclaimerBody {
+            padding: 20px;
+        }
+    }
+}
+// bank modal end 
+
+
+// games page start
+.gamesPage {
+    padding: 45px 90px 120px;
+    & .gamesHeading {
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 800;
+        line-height: normal;
+        & .gamesHeadingIcon {
+            height: 23px;
+            width: 23px;
+        }
+    }
+    & .gamesHeroSection {
+        & .gamesHeader {
+            border-radius: 6px;
+            background: #161A25;
+            padding: 12px ;
+            & .Hacksaw {
+                color: #7E96BA;
+                font-size: 10px;
+                border-radius: 6px;
+                background: #0D131C;
+                padding: 6px 17px;
+            }
+            & .bookmarkIcon {
+                // width: 13px;
+                height: 17px;
+                & img {
+                    filter: grayscale(1);
+                    transition: all 0.3s ease-in-out;
+                }
+                &.active {
+                    & img {
+                        filter: none;
+                    }
+                }
+            }
+            & .demomode {
+                gap: 10px;
+                & .demomodeLabel {
+                    color: #7E96BA;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+            }
+        }
+        & .provablyfairCard {
+            border-radius: 4px;
+            border: 1px solid #7E96BA;
+            width: 170px;
+            height: 52px;
+            & .verifiedMain {
+                border-right: 1px solid #7E96BA;
+                padding: 0 12px;
+                & .verifiedIcon {
+                    width: 23px;
+                    height: 22px;
+                }
+            }
+        }
+        & .verifiedTitle {
+            color: #7E96BA;
+            font-size: 10px;
+            line-height: normal;
+            font-weight: 500;
+        }
+    }
+    & .sliderButton {
+        top: -5px !important;
+    }
+    & .viewAll {
+        color: #CF0;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: normal; 
+        padding-right: 90px;
+    }
+    & .providerSection {
+        padding-top: 45px;
+        & .providerCard {
+            & .providerImg {
+                // width: 130px;
+            }
+            border-radius: 6px;
+            background: #161A25;
+            padding: 8px 16px;
+            height: 75px;
+        }
+    }
+}
+// games page end 
+
+// result page start 
+.resultpage {
+    padding: 30px 20px 37px;
+    & .searchGameCardWrapper {
+        & >* {
+            flex: 0 0 12.5%;
+            width: 12.5%;
+        }
+    }
+    & .resultHeading {
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: normal;
+    }
+    & .resultsearch {
+        height: 35px;
+        background: #161A25;
+        width: 223px;
+        & .resultInput {
+            color: #B2B6C5;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: normal;
+            &::placeholder {
+                color: #B2B6C5;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+        & .resultsearchBtn {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    & .resultdropdown {
+        background-color: #1F2330;
+        padding: 11px;
+        gap: 2px;
+        &.proviederdrop {
+            padding: 11px 20px;
+        }
+        & .providerName {
+            color: #B2B6C5;
+            font-size: 10px;
+            font-weight: 800;
+            line-height: normal;
+            &.providerbutton {
+                color: #CF0;
+            }
+        }
+        & .providerMenu {
+            // top: 10px !important;
+            background-color: #1F2330;
+            min-width: 100%;
+            // right: -10px !important;
+            transform: translate(0, 38px) !important;
+            & .btninner {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                &:hover {
+                    background-color: #252E39;
+                }
+            }
+            & .clearall {
+                font-size: 12px;
+                font-weight: 500;
+                color: #B2B6C5;
+            }
+            & .providerLabel {
+                font-size: 12px;
+                font-weight: 500;
+                color: #B2B6C5;
+                padding: 6px 8px;
+                transition: all 0.3s ease-in-out;
+                line-height: normal;
+                &:hover {
+                    background-color: #252E39;
+                }
+                & .Providercheck {
+                    height: 16px;
+                    min-width: 16px;
+                    max-width: 16px;
+                    background-color: #0D131C;
+                    border:1px solid #272B36;
+                    padding: 2px;
+                    &:checked {
+                        background-image:url(../Img/sidebar/check.png) ;
+                        background-position: center;
+                        background-size: 11px;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            &.resultMenu {
+                max-height: 130px;
+            }
+        }
+    }
+    & .loadmoremain {
+        padding-top: 35px;
+        & .loadmorebtn {
+            color: #FFF;
+            font-size: 10px;
+            font-weight: 800;
+            line-height: normal;
+            background-color: #1F2330;
+            padding: 12px 31px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: #272B36;
+            }
+        }
+    }
+}
+// result page end
+
+// policy page start
+.policypage {
+    padding: 58px 75px 75px;
+    & .policyHeading {
+        color: #D8DEE5;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: normal;
+        font-variant: all-small-caps;
+        // &.policamlHeading {
+        //     font-size: 30px;
+        // }
+    }
+    & .policyDate {
+        color: #D8DEE5;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+    }
+    & .policysubHeading {
+        color: #D8DEE5;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: normal;
+    }
+    & .policyDetail {
+        color: #989CAD;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    & .policyLink {
+        color: #D8DEE5;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+    }
+    & .policymain {
+        gap: 40px;
+        & .policyInner {
+            gap: 20px;
+        }
+    }
+}
+// policy page end
+
+// transaction modal start 
+.transactionModal {
+    & .transactionDialog {
+        max-width: 600px;
+        // max-height: 100px;
+        & .transactionContent {
+            background-color: #161a25;
+            & .transactionHeader {
+                padding: 10px 30px 20px ;
+                & .transactionTitle {
+                    font-size: 18px;
+                    color: #fff;
+                    font-weight:600;
+                }
+                & .btn-close {
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+            & .transactionBody {
+                padding: 10px 30px 45px ;
+                & .inputdata {
+                    gap: 25px;
+                    & .inputlogin {
+                        height: 40px;
+                    }
+                }
+                & .filechooseLabel {
+                    height: 100px;
+                    width: 100px;
+                    border: 1px solid #D3F93A;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+// transaction modal end 
+
+// message offcanvas start 
+.msgoffcanvas {
+    max-width: 500px;
+    background-color: #161A25;
+    & .msgHeader {
+        margin: 18px 22px 0 ;
+        padding-bottom: 15px !important;
+        border-bottom: 2px solid #B2B6C5;
+        & .msgImg {
+            color: #FFF;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: normal;
+            border-radius: 5px;
+            background: #222634;
+            width: 85.45px;
+            height: 28.128px;
+            padding-left: 10px;
+            gap: 8px;
+            & .msgicon {
+                height: 18px;
+                width: 18px;
+            }
+        }
+        & .chatrules {
+            color: #CF0;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: normal;
+        }
+        & .offcanvasclose {
+            width: 26px;
+            height: 20px;
+            background: none;
+        }
+        & .closebtn {
+            height: 12px;
+            background: none;
+            width: 12px;
+        }
+    }
+    & .msgBody {
+        padding: 18px 22px 30px;
+        & .msgContent {
+            gap: 10px;
+            & .msgBtn {
+                border-radius: 8px;
+                background: #222634;
+                padding: 12px 16px;
+                gap: 15px;
+                & .userimg {
+                    height: 30px;
+                    width: 30px;
+                    border: 1px solid #FFF;
+                }
+                & .username {
+                    color: #FFF;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: normal;
+                    white-space: nowrap;
+                }
+                & .usermsg {
+                    color: #B2B6C5;
+                    font-size: 13px;
+                    font-weight: 600;
+                    line-height: normal;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
+                    // overflow: hidden;
+                }
+            }
+        }
+    }
+    & .offcanvasFooter {
+        padding: 18px 22px;
+        background: #161A25;
+        box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.50);
+        & .InputMain {
+            padding: 0 17px;
+            border-radius: 8px;
+            background: #0D131C;
+            height: 50px;
+            
+            & .sendInput {
+                color: #B2B6C5;
+                font-size: 13px;
+                font-weight: 500;
+                line-height: normal;
+                &::placeholder {
+                    color: #B2B6C5;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+            & .smileFace {
+                height: 20px;
+                width: 20px;
+                margin-right: 14px;
+            }
+            & .sendBtn {
+                width: 38.757px;
+                height: 27.5px;
+                border-radius: 5px;
+                background: #CF0;
+                box-shadow: 0px 0px 10px 0px #FFF inset;
+                // padding: 4px;
+                & .sendImg {
+                    width: 14.148px;
+                    height: 14.07px;
+                }
+            }
+        }
+    }
+}
+.chatrulescard {
+    border-radius: 8px;
+    background: #161A25;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.50);
+    padding: 14px;
+    & .chatHeading {
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: normal;
+    }
+    & .ruleMenu {
+        padding-top: 12px;
+        & .rules {
+            color: #B2B6C5;
+            font-size: 10px;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+}
+// message offcanvas end 
+
+// chat rules modal start 
+.rulesmodal {
+    & .rulesDialog {
+        max-width: 390px;
+        & .rulesheader {
+            padding: 14px 14px 0;
+            & .closebtn {
+                height: 13px;
+                width: 13px;
+                margin-right: 13px;
+                background: none;
+            }
+        }
+        & .rulebody {
+            padding: 0 14px 14px;
+        }
+    }
+}
+// chat rules modal end
+
+@include media-breakpoint(basic) {
+}
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {
+}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(xxl) {
+    // policy page start
+.policypage {
+    padding: 58px 150px 75px;
+    & .policyHeading {
+    }
+    & .policyDate {
+    }
+    & .policysubHeading {
+    }
+    & .policyDetail {
+    }
+    & .policyLink {
+    }
+}
+// policy page end
+}
+
+@include media-breakpoint-down(xxl) {
+}
+
+@include media-breakpoint-down(xl) {
+    .accountTab {
+        & .tabMain {
+            & .accountBtn {
+                & .accounttabIcon {
+                    & img {
+                    }
+                }
+                &.active {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+                &:hover {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+            }
+        }
+        & .accountTabcard {
+            & .cardImg {
+                height: 22px;
+                width: 22px;
+                & img {
+                }
+            }
+            & .accountCardHeading {
+                font-size: 18px;
+            }
+            & .cardsubHeading {
+                padding-top: 31px;
+                & span {
+                }
+                &.disabled {
+                }
+            }
+            & .accountInput {
+                & .accountLabel {
+                    & span {
+                    }
+                }
+                & .inputmain {
+                    & .userNameInput {
+                        &::placeholder {
+                        }
+                    }
+                    & .customBtn {
+                    }
+                }
+            }
+            & .privateProfile {
+                gap: 18px;
+                & .checkLabel {
+                }
+            }
+            & .totalWallet {
+                & span {
+                }
+            }
+            & .mainCard {
+                & .mainHeading {
+                }
+                & .CoinIcon {
+                }
+            }
+            & .customBtn {
+            }
+            & .reffralsTab {
+                & .refferalBtn {
+                    &.active {
+                    }
+                }
+            }
+            & .setcodeCard {
+                & .setCodetitle {
+                }
+            }
+            & .reffralsCard {
+                & .totalComission {
+                }
+                & .Comission {
+                }
+            }
+            & .affiliateTable {
+                & .tableHead {
+                    & th {
+                    }
+                }
+                & .tablebody {
+                    & tr {
+                        & td {
+                        }
+                    }
+                    & .claimBtn {
+                        &:hover {
+                        }
+                    }
+                    & .copyBtn {
+                    }
+                }
+            }
+            ::-webkit-scrollbar-track {
+            }
+            ::-webkit-scrollbar {
+            }
+            ::-webkit-scrollbar-thumb {
+            }
+            & .affiliateCardTitle {
+                & .affliateProgram {
+                }
+            }
+            & .NoEntry {
+                font-size: 17px;
+            }
+            & .transactionCard {
+                & .card-header {
+                    & .transactionLabel {
+                        font-size: 19px;
+                    }
+                    & .transactionInput {
+                        &::placeholder {
+                        }
+                    }
+                }
+                & .cardBody {
+                    & .cancelBtn {
+                    }
+                }
+            }
+            & .inputGroup{
+                & .EmailInput {
+                    &:focus {
+                    }
+                    
+                }
+                & .emailLabel {
+                    & span {
+                    }
+                }
+            }
+            & .EmailInput:focus ~ .emailLabel {
+            }
+            & .changeGmailBtn {
+            }
+        }
+    }
+
+    // games page start 
+    .gamesPage {
+        padding: 45px 60px 80px;
+        & .gamesHeading {
+            & .gamesHeadingIcon {
+            }
+        }
+        & .gamesHeroSection {
+            & .gamesHeader {
+                & .Hacksaw {
+                }
+                & .bookmarkIcon {
+                }
+                & .demomode {
+                    & .demomodeLabel {
+                    }
+                }
+            }
+            & .provablyfairCard {
+                & .verifiedMain {
+                    & .verifiedIcon {
+                    }
+                }
+            }
+            & .verifiedTitle {
+            }
+        }
+        & .sliderButton {
+        }
+        & .viewAll {
+        }
+        & .providerSection {
+            & .providerCard {
+                & .providerImg {
+                }
+            }
+        }
+    }
+    // games page end 
+
+    // policy page start
+    .policypage {
+        padding: 50px 50px 65px;
+        & .policyHeading {
+            font-size: 28px;
+        }
+        & .policyDate {
+            font-size: 18px;
+        }
+        & .policysubHeading {
+            font-size: 19px;
+        }
+        & .policyDetail {
+            font-size: 18px;
+        }
+        & .policyLink {
+            font-size: 18px;
+        }
+        & .policymain {
+            gap: 40px;
+            & .policyInner {
+                gap: 20px;
+            }
+        }
+    }
+    // policy page end
+
+}
+
+@include media-breakpoint-down(lg) {
+    .accountTab {
+        padding: 40px 50px 60px ;
+        & .tabMain {
+            & .accountBtn {
+                font-size: 14px;
+                & .accounttabIcon {
+                    height: 18px;
+                    width: 18px;
+                    & img {
+                    }
+                }
+                &.active {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+                &:hover {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+            }
+        }
+        & .accountTabcard {
+            padding: 28px 18px 35px;
+            & .cardImg {
+                height: 20px;
+                width: 20px;
+                & img {
+                }
+            }
+            & .accountCardHeading {
+                font-size: 17px;
+            }
+            & .cardsubHeading {
+                padding-top: 28px;
+                font-size: 14px;
+                & span {
+                }
+                &.disabled {
+                }
+            }
+            & .accountInput {
+                & .accountLabel {
+                    & span {
+                    }
+                }
+                & .inputmain {
+                    & .userNameInput {
+                        &::placeholder {
+                        }
+                    }
+                    & .customBtn {
+                    }
+                }
+            }
+            & .privateProfile {
+                gap: 18px;
+                & .checkLabel {
+                }
+            }
+            & .totalWallet {
+                
+                & span {
+                }
+            }
+            & .mainCard {
+                & .mainHeading {
+                }
+                & .CoinIcon {
+                }
+            }
+            & .customBtn {
+            }
+            & .reffralsTab {
+                & .refferalBtn {
+                    &.active {
+                    }
+                }
+            }
+            & .setcodeCard {
+                & .setCodetitle {
+                }
+            }
+            & .reffralsCard {
+                & .totalComission {
+                    font-size: 16px;
+                }
+                & .Comission {
+                    font-size: 14px;
+                }
+            }
+            & .affiliateTable {
+                & .tableHead {
+                    & th {
+                    }
+                }
+                & .tablebody {
+                    & tr {
+                        & td {
+                        }
+                    }
+                    & .claimBtn {
+                        &:hover {
+                        }
+                    }
+                    & .copyBtn {
+                    }
+                }
+            }
+            ::-webkit-scrollbar-track {
+            }
+            ::-webkit-scrollbar {
+            }
+            ::-webkit-scrollbar-thumb {
+            }
+            & .affiliateCardTitle {
+                & .affliateProgram {
+                }
+            }
+            & .NoEntry {
+                font-size: 16px;
+            }
+            & .transactionCard {
+                & .card-header {
+                    & .transactionLabel {
+                        font-size: 18px;
+                    }
+                    & .transactionInput {
+                        &::placeholder {
+                        }
+                    }
+                }
+                & .cardBody {
+                    & .cancelBtn {
+                    }
+                }
+            }
+            & .inputGroup{
+                & .EmailInput {
+                    &:focus {
+                    }
+                    
+                }
+                & .emailLabel {
+                    & span {
+                    }
+                }
+            }
+            & .EmailInput:focus ~ .emailLabel {
+            }
+            & .changeGmailBtn {
+            }
+        }
+    }
+
+    // bank modal start 
+    .bankModal {
+        & .bankdialog {
+            // max-width: 100%;
+            & .bankContent {
+                // padding:20px 16px;
+                // padding:20px 35px 45px;
+                & .bankHeader {
+                    padding:20px 35px 13px;
+                    & .btn-close {
+                    }
+                    & .bankTab {
+                        & .bankBtn {
+                            // padding: 6px 30px;
+                            font-size: 12px;
+                            &.active {
+                            }
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .bankbody {
+                    padding:20px 35px 45px;
+                }
+                & .banktabContent {
+                    & .cryptoTab {
+                        & .cryptotabBtn {
+                            padding: 9px 30px;
+                            font-size: 12px;
+                            &.active {
+                            }
+                            &:hover {
+                            }
+                        }
+                    }
+                    & .cryptoContent {
+                    }
+                    & .cryptoHeading {
+                        font-size: 14px;
+                    }
+                    & .usdtBtn {
+                        & .usdtIcon {
+                        }
+                    }
+                    & .btcdropDown {
+                        & .dropDownBtn {
+                            &.network {
+                            }
+                            & .dropDownBtnInner {
+                                font-size: 16px;
+                            }
+                            &::after {
+                            }
+                            &.buycryptoTab {
+                                &::after {
+                                }
+                            }
+                            &.show {
+                            }
+                            & .bitcoinIcon {
+                                height:21px;
+                                width: 21px;
+                            }
+                        }
+                        & .btcdropmenu {
+                            & .btcInner {
+                                &:hover {
+                                }
+                                & .selectIcon {
+                                    height:21px;
+                                    width: 21px;
+                                }
+                                
+                            }
+                        }
+                    }
+                    & .bankmodalsubheading {
+                    }
+                    & .bonusTitle {
+                        font-size: 11px;
+                        & .infoImg {
+                        }
+                    }
+                    & .depositCard {
+                        & .qrImg {
+                        }
+                        & .depositAddress {
+                            font-size: 12px;
+                        }
+                        & .depositcardTitle {
+                            & span {
+                            }
+                        }
+                        & .copyAddressmain {
+                            & .addressInput {
+                            }
+                        }
+                        & .infoIcon {
+                        }
+                    }
+                    & .playbtntwo {
+                        & .playBtnInner {
+                        }
+                    }
+                    & .eurIcon {
+                    }
+                    & .btcValue {
+                        & .btcLabel {
+                        }
+                        & .btcInput {
+                        }
+                        & .btcvalueImg {
+                        }
+                    }
+                    & .Equal {
+                    }
+                    & .btnvaluetitle {
+                        font-size: 12px;
+                    }
+                    & .eurdropDown {
+                        & .eurBtn {
+                            &::after {
+                            }
+                            &.show {
+                            }
+                            &:active {
+                            }
+                        }
+                        & .eurMenu {
+                            & .eurBtnInner {
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                    & .eurExtra {
+                        padding: 16px 21px;
+                        & .eurtitle {
+                            font-size: 14px;
+                            &.eurtitletwo {
+                            }
+                        }
+                    }
+                    & .eurCard {
+                        &.active {
+                        }
+                        & .eurCardTitle {
+                        }
+                    }
+                    & .receivingLabel {
+                        & .receivingStar {
+                        }
+                        & .withdrawalStar {
+                        }
+                    }
+                    & .receivingInput {
+                        &::placeholder {
+                        }
+                    }
+                    & .networkFee {
+                    }
+                    & .inputdata {
+                        & .forgotPassword {
+                        }
+                        & a {
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    // bank modal end 
+
+    // games page start 
+    .gamesPage {
+        padding: 40px 30px 44px;
+        & .gamesHeading {
+            & .gamesHeadingIcon {
+            }
+        }
+        & .gamesHeroSection {
+            & .gamesHeader {
+                & .Hacksaw {
+                }
+                & .bookmarkIcon {
+                }
+                & .demomode {
+                    & .demomodeLabel {
+                    }
+                }
+            }
+            & .provablyfairCard {
+                height: 50px;
+                width: 150px;
+                & .verifiedMain {
+                    & .verifiedIcon {
+                    }
+                }
+            }
+            & .verifiedTitle {
+            }
+        }
+        & .sliderButton {
+        }
+        & .viewAll {
+        }
+        & .providerSection {
+            // padding-top: 40px;
+            & .providerCard {
+                & .providerImg {
+                }
+            }
+        }
+    }
+    // games page end 
+
+     // result page start 
+    .resultpage {
+        // padding: 30px 25px 37px;/
+        & .searchGameCardWrapper {
+            & >* {
+            }
+        }
+        & .resultHeading {
+        }
+        & .resultsearch {
+            & .resultInput {
+                font-size: 13px;
+                &::placeholder {
+                    font-size: 13px;
+                }
+            }
+            & .resultsearchBtn {
+            }
+        }
+        & .resultdropdown {
+            & .providerName {
+                &.providerbutton {
+                }
+            }
+            & .providerMenu {
+                & .btninner {
+                    &:hover {
+                    }
+                }
+            }
+        }
+        & .loadmoremain {
+            & .loadmorebtn {
+                &:hover {
+                }
+            }
+        }
+    }
+    // result page end
+
+    // policy page start
+    .policypage {
+        padding: 38px 40px 50px;
+        & .policyHeading {
+            font-size: 26px;
+        }
+        & .policyDate {
+            font-size: 16px;
+        }
+        & .policysubHeading {
+            font-size: 18px;
+        }
+        & .policyDetail {
+            font-size: 16px;
+        }
+        & .policyLink {
+            font-size: 16px;
+        }
+        & .policymain {
+            gap: 33px;
+            & .policyInner {
+                gap: 17px;
+            }
+        }
+    }
+    // policy page end
+}
+
+@include media-breakpoint-down(md) {
+    .loginModal {
+        & .logindialog {
+            & .loginContent {
+                & .header {
+                    & .logoimg {
+                        & img {
+                        }
+                    }
+                }
+                & .btnClose {
+                    &:hover{
+                    }
+                    &.smbtnClose {
+                    }
+                }
+                & .loginformMain {
+                    & .logindata {
+                        padding: 35px 22px 36px;
+                        & .loginBtn {
+                            padding: 13px 28px;
+                        }
+                        & .loginbutton {
+                            & .directLogin {
+                            }
+                            &::before{
+                            }
+                        }
+                        & .link{
+                            & img{
+                            }
+                        }
+                    }
+                    & .tabdata {
+                        padding-top: 35px;
+                    }
+                }
+                & .loginImg  {
+                    &::after{
+                    }
+                    &::before{
+                    }
+                    & .innerimages {
+                        & .mainHeading {
+                            font-size: 25px;
+                        }
+                        & .subheading {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // .inputdata {
+    //     & .inputLabel {
+    //         font-size: 14px;
+    //         & span {
+    //             font-size: 14px;
+    //         }
+    //     }
+    //     & .inputlogin { 
+    //         font-size: 10px;
+    //         height: 32px;
+    //         &::placeholder {
+    //             font-size: 10px;
+    //         }
+    //     }
+    //     &.passwordInput {
+    //         padding-top: 33px;
+    //     }
+    //     &.forgotmain {
+    //         // padding: 13px 0 10px 0;
+    //         & .forgotPassword {
+    //             font-size: 10px;
+    //         }
+    //     }
+    //     & .form-check {
+    //         & .form-check-label{
+    //             cursor: pointer;
+    //         }
+    //         & .form-check-input {
+    //             &::before{
+    //             }
+    //             &:checked{
+    //                 &::before{
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    .accountTab {
+        padding: 42px 17px 20px  ;
+        & .tabMain {
+            gap: 10px;
+            & .accountBtn {
+                font-size: 13px;
+                & .accounttabIcon {
+                    height: 17px;
+                    width: 17px;
+                    & img {
+                    }
+                }
+                &.active {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+                &:not(.collapsed) {
+                    border-color: #CF0;
+                    & .accounttabIcon {
+                        & img {
+                            filter: none;
+                        }
+                    }
+                }
+                &:hover {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+            }
+        }
+        & .accountTabcard {
+            padding: 35px 18px;
+            & .cardImg {
+                & img {
+                }
+            }
+            & .accountCardHeading {
+            }
+            & .cardsubHeading {
+                padding-top: 0;
+                font-size: 13px;
+                & span {
+                    height: 14px;
+                    width:14px;
+                }
+                &.disabled {
+                }
+            }
+            & .accountInput {
+                & .accountLabel {
+                    & span {
+                    }
+                }
+                & .inputmain {
+                    & .userNameInput {
+                        font-size: 11px;
+                        height: 35px;
+                        &::placeholder {
+                        font-size: 11px;
+                        }
+                    }
+                    & .customBtn {
+                        font-size: 12px;
+                    }
+                }
+            }
+            & .privateProfile {
+                gap: 18px;
+                & .checkLabel {
+                    font-size: 13px;
+                }
+            }
+            & .totalWallet {
+                font-size: 10px;
+                & span {
+                }
+            }
+            & .mainCard {
+                & .mainHeading {
+                    font-size: 11px;
+                }
+                & .CoinIcon {
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+            & .customBtn {
+                font-size: 12px;
+            }
+            & .reffralsTab {
+                & .refferalBtn {
+                    font-size: 12px;
+                    border-radius: 4px;
+                    &.active {
+                    }
+                }
+            }
+            & .setcodeCard {
+                & .setCodetitle {
+                    font-size: 13px;
+                }
+            }
+            & .reffralsCard {
+                & .totalComission {
+                    font-size: 13px;
+                }
+                & .Comission {
+                    font-size: 11px;
+                }
+            }
+            & .affiliateTable {
+                border-radius: 5px;
+                background: #0D131C;
+                padding:0 5px;
+                & .tableHead {
+                    & th {
+                        font-size: 10px;
+                    }
+                }
+                & .tablebody {
+                    & tr {
+                        & td {
+                            font-size: 10px;
+                        }
+                    }
+                    & .claimBtn {
+                        font-size: 10px;
+                        &:hover {
+                        }
+                    }
+                    & .copyBtn {
+                        font-size: 10px;
+                    }
+                }
+            }
+            ::-webkit-scrollbar-track {
+            }
+            ::-webkit-scrollbar {
+            }
+            ::-webkit-scrollbar-thumb {
+            }
+            & .affiliateCardTitle {
+                font-size:11px;
+                & .affliateProgram {
+                }
+            }
+            & .NoEntry {
+                padding: 18px 23px;
+                font-size: 12px;
+            }
+            & .transactionCard {
+                & .card-header {
+                    & .transactionLabel {
+                        font-size: 12px;
+                    }
+                    & .transactionInput {
+                        border-radius: 3px;
+                        font-size: 10px;
+                        &::placeholder {
+                        }
+                    }
+                }
+                & .cardBody {
+                    & .cancelBtn {
+                        font-size: 11px;
+                    }
+                }
+            }
+            & .inputGroup{
+                & .EmailInput {
+                    font-size: 9px;
+                    &:focus {
+                    }
+                    
+                }
+                & .emailLabel {
+                    font-size: 9px;
+                    & span {
+                    }
+                }
+            }
+            & .EmailInput:focus ~ .emailLabel {
+            }
+            & .changeGmailBtn {
+            }
+        }
+        & .settingtab {
+            & .createpassword {
+                // padding: 4px px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    // bank modal start 
+    .bankModal {
+        & .bankdialog {
+            max-width: 90%;
+            & .bankContent {
+                // padding:20px 16px;
+                // padding:20px 25px 45px;
+                & .bankHeader {
+                    padding:20px 25px ;
+                    & .btn-close {
+                    }
+                    & .bankTab {
+                        & .bankBtn {
+                            padding: 6px 30px;
+                            font-size: 11px;
+                            &.active {
+                            }
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .bankbody {
+                    padding:15px 25px 45px;
+                }
+                & .banktabContent {
+                    & .cryptoTab {
+                        & .cryptotabBtn {
+                            padding: 8px 26px;
+                            font-size: 11px;
+                            &.active {
+                            }
+                            &:hover {
+                            }
+                        }
+                    }
+                    & .cryptoContent {
+                    }
+                    & .cryptoHeading {
+                        font-size: 13px;
+                    }
+                    & .usdtBtn {
+                        font-size: 9px;
+                        & .usdtIcon {
+                        }
+                    }
+                    & .btcdropDown {
+                        & .dropDownBtn {
+                            font-size: 11px;
+                            &.network {
+                            }
+                            & .dropDownBtnInner {
+                                font-size: 15px;
+                            }
+                            &::after {
+                                width: 8.042px;
+                                height: 12.02px;
+                            }
+                            &.buycryptoTab {
+                                &::after {
+                                }
+                            }
+                            &.show {
+                            }
+                            & .bitcoinIcon {
+                                height: 20px;
+                                width: 20px;
+                            }
+                        }
+                        & .btcdropmenu {
+                            & .btcInner {
+                                font-size: 11px;
+                                &:hover {
+                                }
+                                & .selectIcon {
+                                    height: 20px;
+                                    width: 20px;
+                                }
+                                
+                            }
+                        }
+                    }
+                    & .bankmodalsubheading {
+                    }
+                    & .bonusTitle {
+                        font-size: 10px;
+                        & .infoImg {
+                        }
+                    }
+                    & .depositCard {
+                        & .qrImg {
+                            height: 100px;
+                            width: 100px;
+                        }
+                        & .depositAddress {
+                            font-size: 11px;
+                        }
+                        & .depositcardTitle {
+                            font-size: 10px;
+                            & span {
+                            }
+                        }
+                        & .copyAddressmain {
+                            padding: 6px;
+                            & .addressInput {
+                                font-size: 10px;
+                            }
+                        }
+                        & .infoIcon {
+                        }
+                    }
+                    & .playbtntwo {
+                        & .playBtnInner {
+                            font-size: 9px;
+                            height: 27px;
+                        }
+                    }
+                    & .eurIcon {
+                        height: 17px;
+                        width: 17px;
+                    }
+                    & .btcValue {
+                        & .btcLabel {
+                        }
+                        & .btcInput {
+                        }
+                        & .btcvalueImg {
+                        }
+                    }
+                    & .Equal {
+                    }
+                    & .btnvaluetitle {
+                        font-size: 11px;
+                        // padding-top: 16px;
+                    }
+                    & .eurdropDown {
+                        & .eurBtn {
+                            font-size: 11px;
+                            &::after {
+                            }
+                            &.show {
+                            }
+                            &:active {
+                            }
+                        }
+                        & .eurMenu {
+                            & .eurBtnInner {
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                    & .eurExtra {
+                        padding: 14px 21px;
+                        & .eurtitle {
+                            font-size: 12px;
+                            &.eurtitletwo {
+                            }
+                        }
+                    }
+                    & .eurCard {
+                        font-size: 11px;
+                        padding: 13px 0;
+                        &.active {
+                        }
+                        & .eurCardTitle {
+                            font-size: 7px;
+                            // padding: 1px 6px;
+                        }
+                    }
+                    & .receivingLabel {
+                        & .receivingStar {
+                        }
+                        & .withdrawalStar {
+                        }
+                    }
+                    & .receivingInput {
+                        &::placeholder {
+                        }
+                    }
+                    & .networkFee {
+                        font-size: 9px;
+                    }
+                    & .inputdata {
+                        & .forgotPassword {
+                        }
+                        & a {
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    // bank modal end 
+
+     // games page start 
+    .gamesPage {
+        padding: 30px 20px 44px;
+        & .gamesHeading {
+            font-size: 14px;
+            & .gamesHeadingIcon {
+                height: 18px;
+                width: 18px;
+            }
+        }
+        & .gamesHeroSection {
+            & .gamesHeader {
+                padding: 15px 4px;
+                & .Hacksaw {
+                    font-size:8px;
+                    padding: 6px 14px;
+                }
+                & .bookmarkIcon {
+                    height: 16px;
+                }
+                & .demomode {
+                    & .demomodeLabel {
+                        font-size: 11px;
+                    }
+                }
+            }
+            & .provablyfairCard {
+                height: 40px;
+                width: 130px;
+                & .verifiedMain {
+                    & .verifiedIcon {
+                        height:20px;
+                        width: 20px;
+                    }
+                }
+            }
+            & .verifiedTitle {
+                font-size: 8px;
+            }
+        }
+        & .sliderButton {
+            // top: -4px !important;
+        }
+        & .viewAll {
+            font-size: 11px;
+            padding-right: 85px;
+        }
+        & .providerSection {
+            padding-top: 40px;
+            & .providerCard {
+                padding: 8px 10px;
+                height: 60px;
+                & .providerImg {
+                }
+            }
+        }
+    }
+    // games page end 
+
+    // result page start 
+    .resultpage {
+        padding: 30px 15px 37px;
+        & .searchGameCardWrapper {
+            & >* {
+                flex: 0 0 16.66%;
+                width: 16.66%;
+            }
+        }
+        & .resultHeading {
+            font-size: 14px;
+        }
+        & .resultsearch {
+            width: 200px;
+            height: 33px;
+            & .resultInput {
+                font-size: 12px;
+                &::placeholder {
+                    font-size: 12px;
+                }
+            }
+            & .resultsearchBtn {
+                height: 9px;
+                width: 9px;
+            }
+        }
+        & .resultdropdown {
+            padding: 9px;
+            & .providerName {
+                font-size: 9px;
+                &.providerbutton {
+                }
+            }
+            & .providerMenu {
+                & .btninner {
+                    &:hover {
+                    }
+                }
+            }
+        }
+        & .loadmoremain {
+            & .loadmorebtn {
+                &:hover {
+                }
+            }
+        }
+    }
+    // result page end
+
+    // policy page start
+    .policypage {
+        padding: 38px 24px 50px;
+        & .policyHeading {
+            font-size: 22px;
+        }
+        & .policyDate {
+            font-size: 15px;
+        }
+        & .policysubHeading {
+            font-size: 16px;
+        }
+        & .policyDetail {
+            font-size: 14px;
+        }
+        & .policyLink {
+            font-size: 14px;
+        }
+        & .policymain {
+            gap: 30px;
+            & .policyInner {
+                gap: 15px;
+            }
+        }
+    }
+    // policy page end
+
+    // transaction modal start 
+    .transactionModal {
+        & .transactionDialog {
+            max-width: 550px;
+            & .transactionContent {
+                & .transactionHeader {
+                    & .transactionTitle {
+                    }
+                    & .btn-close {
+                    }
+                }
+                & .transactionBody {
+                    & .inputdata {
+                        & .inputlogin {
+                        }
+                    }
+                    & .filechooseLabel {
+                    }
+                }
+            }
+        }
+    }
+    // transaction modal end 
+}
+
+@include media-breakpoint-down(sm) {
+    .loginModal {
+        & .logindialog {
+            & .loginContent {
+                & .header {
+                    & .logoimg {
+                        & img {
+                        }
+                    }
+                }
+                & .btnClose {
+                    &:hover{
+                    }
+                    &.smbtnClose {
+                    }
+                }
+                & .loginformMain {
+                    & .logindata {
+                        padding: 30px 16px;
+                        & .loginBtn {
+                            padding: 10px 28px;
+                            border-radius: 6px;
+                            font-size: 12px;
+                        }
+                        & .loginbutton {
+                            & .directLogin {
+                            }
+                            &::before{
+                            }
+                        }
+                        & .link{
+                            width: 27px;
+                            height: 27px;
+                            & img{
+                                width: 8px;
+                                height: 8px;
+                            }
+                        }
+                    }
+                    & .tabdata {
+                        padding-top: 35px;
+                    }
+                }
+                & .loginImg  {
+                    &::after{
+                    }
+                    &::before{
+                    }
+                    & .innerimages {
+                        & .mainHeading {
+                            font-size: 20px;
+                        }
+                        & .subheading {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .inputdata {
+        & .inputLabel {
+            font-size: 12px;
+            & span {
+                font-size: 12px;
+            }
+        }
+        & .inputlogin { 
+            font-size: 10px;
+            height: 32px;
+            &::placeholder {
+                font-size: 10px;
+            }
+        }
+        &.passwordInput {
+            padding-top: 20px;
+        }
+        &.forgotmain {
+            // padding: 13px 0 10px 0;
+            & .forgotPassword {
+                font-size: 10px;
+            }
+        }
+        & .form-check {
+            & .form-check-label{
+                cursor: pointer;
+            }
+            & .form-check-input {
+                &::before{
+                }
+                &:checked{
+                    &::before{
+                    }
+                }
+            }
+        }
+    }
+    .accountTab {
+        padding: 36px 11px 9px ;
+        & .tabMain {
+            gap: 8px;
+            & .accountBtn {
+                font-size: 13px;
+                & .accounttabIcon {
+                    height: 16px;
+                    width: 16px;
+                    & img {
+                    }
+                }
+                &.active {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+                &:hover {
+                    & .accounttabIcon {
+                        & img {
+                        }
+                    }
+                }
+            }
+        }
+        & .accountTabcard {
+            padding: 25px 15px;
+            & .cardImg {
+                & img {
+                }
+            }
+            & .accountCardHeading {
+            }
+            & .cardsubHeading {
+                padding-top: 0;
+                font-size: 13px;
+                & span {
+                    height: 11px;
+                    width:11px;
+                }
+                &.disabled {
+                }
+            }
+            & .accountInput {
+                & .accountLabel {
+                    & span {
+                    }
+                }
+                & .inputmain {
+                    & .userNameInput {
+                        font-size: 9px;
+                        height: 32px;
+                        &::placeholder {
+                        font-size: 9px;
+                        }
+                    }
+                    & .customBtn {
+                        font-size: 10px;
+                    }
+                }
+            }
+            & .privateProfile {
+                gap: 18px;
+                & .checkLabel {
+                    font-size: 12px;
+                }
+            }
+            & .totalWallet {
+                font-size: 8px;
+                & span {
+                }
+            }
+            & .mainCard {
+                & .mainHeading {
+                    font-size: 8px;
+                }
+                & .CoinIcon {
+                    height: 12px;
+                    width: 12px;
+                }
+            }
+            & .customBtn {
+                font-size: 10px;
+            }
+            & .reffralsTab {
+                & .refferalBtn {
+                    font-size: 10px;
+                    border-radius: 3px;
+                    &.active {
+                    }
+                }
+            }
+            & .setcodeCard {
+                & .setCodetitle {
+                    font-size: 10px;
+                }
+            }
+            & .reffralsCard {
+                & .totalComission {
+                    font-size: 10px;
+                }
+                & .Comission {
+                    font-size: 8px;
+                }
+            }
+            & .affiliateTable {
+                border-radius: 5px;
+                background: #0D131C;
+                padding:0 5px;
+                & .tableHead {
+                    & th {
+                        font-size: 8px;
+                    }
+                }
+                & .tablebody {
+                    & tr {
+                        & td {
+                            font-size: 8px;
+                        }
+                    }
+                    & .claimBtn {
+                        font-size: 8px;
+                        &:hover {
+                        }
+                    }
+                    & .copyBtn {
+                        font-size: 8px;
+                    }
+                }
+            }
+            ::-webkit-scrollbar-track {
+            }
+            ::-webkit-scrollbar {
+            }
+            ::-webkit-scrollbar-thumb {
+            }
+            & .affiliateCardTitle {
+                font-size: 9px;
+                & .affliateProgram {
+                }
+            }
+            & .NoEntry {
+                padding: 18px 23px;
+                font-size: 10px;
+            }
+            & .transactionCard {
+                & .card-header {
+                    & .transactionLabel {
+                        font-size: 10px;
+                    }
+                    & .transactionInput {
+                        border-radius: 3px;
+                        font-size: 8px;
+                        &::placeholder {
+                        }
+                    }
+                }
+                & .cardBody {
+                    & .cancelBtn {
+                        font-size: 9px;
+                    }
+                }
+            }
+            & .inputGroup{
+                & .EmailInput {
+                    &:focus {
+                    }
+                    
+                }
+                & .emailLabel {
+                    font-size: 8px;
+                    & span {
+                    }
+                }
+            }
+            & .EmailInput:focus ~ .emailLabel {
+            }
+            & .changeGmailBtn {
+            }
+        }
+        & .settingtab {
+            & .createpassword {
+                padding: 4px 8px;
+                font-size: 9px;
+            }
+        }
+    }
+
+    // bank modal start 
+    .bankModal {
+        & .bankdialog {
+            max-width: 100%;
+            & .bankContent {
+                // padding:20px 16px 40px;
+                & .bankHeader {
+                    padding:20px 16px 13px;
+                    & .btn-close {
+                    }
+                    & .bankTab {
+                        & .bankBtn {
+                            padding: 4px 20px;
+                            font-size: 10px;
+                            &.active {
+                            }
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .bankbody {
+                    padding:20px 16px 40px;
+                }
+                & .banktabContent {
+                    & .cryptoTab {
+                        & .cryptotabBtn {
+                            padding: 6px 20px;
+                            font-size: 10px;
+                            &.active {
+                            }
+                            &:hover {
+                            }
+                        }
+                    }
+                    & .cryptoContent {
+                    }
+                    & .cryptoHeading {
+                        font-size: 12px;
+                    }
+                    & .usdtBtn {
+                        font-size: 8px;
+                        & .usdtIcon {
+                        }
+                    }
+                    & .playBtnInner {
+                        font-size: 13px;
+                    }
+                    & .btcdropDown {
+                        & .dropDownBtn {
+                            font-size: 10px;
+                            &.network {
+                            }
+                            & .dropDownBtnInner {
+                                font-size: 12px;
+                            }
+                            &::after {
+                                width: 6.042px;
+                                height: 11.02px;
+                            }
+                            &.buycryptoTab {
+                                padding: 10px 14px;
+                                &::after {
+                                    width: 13.042px;
+                                    height: 8.02px;
+                                }
+                            }
+                            &.show {
+                            }
+                            & .bitcoinIcon {
+                                height: 17px;
+                                width: 17px;
+                            }
+                        }
+                        & .btcdropmenu {
+                            & .btcInner {
+                                font-size: 10px;
+                                &:hover {
+                                }
+                                & .selectIcon {
+                                    height: 17px;
+                                    width: 17px;
+                                }
+                                
+                            }
+                        }
+                    }
+                    & .bankmodalsubheading {
+                        font-size: 10px;
+                    }
+                    & .bonusTitle {
+                        font-size: 9px;
+                        & .infoImg {
+                        }
+                    }
+                    & .depositCard {
+                        & .qrImg {
+                            height: 92px;
+                            width: 92px;
+                        }
+                        & .depositAddress {
+                            font-size: 10px;
+                        }
+                        & .depositcardTitle {
+                            font-size: 9px;
+                            & span {
+                            }
+                        }
+                        & .copyAddressmain {
+                            padding: 5px;
+                            & .addressInput {
+                                font-size: 9px;
+                            }
+                        }
+                        & .infoIcon {
+                        }
+                    }
+                    & .playbtntwo {
+                        & .playBtnInner {
+                            height: 25px;
+                            font-size: 8px;
+                        }
+                    }
+                    & .eurIcon {
+                        height: 14px;
+                        width: 14px;
+                    }
+                    & .btcValue {
+                        & .btcLabel {
+                        }
+                        & .btcInput {
+                        }
+                        & .btcvalueImg {
+                        }
+                    }
+                    & .Equal {
+                    }
+                    & .btnvaluetitle {
+                        font-size: 9px;
+                        padding-top: 16px;
+                    }
+                    & .eurdropDown {
+                        & .eurBtn {
+                            font-size: 10px;
+                            &::after {
+                                height: 6px;
+                                width: 11px;
+                            }
+                            &.show {
+                            }
+                            &:active {
+                            }
+                        }
+                        & .eurMenu {
+                            & .eurBtnInner {
+                                &:hover {
+                                }
+                            }
+                        }
+                    }
+                    & .eurExtra {
+                        padding: 12px 21px;
+                        & .eurtitle {
+                            font-size: 10px;
+                            &.eurtitletwo {
+                            }
+                        }
+                    }
+                    & .eurCard {
+                        font-size: 10px;
+                        padding: 11px 0;
+                        &.active {
+                        }
+                        & .eurCardTitle {
+                            font-size: 6px;
+                            padding: 1px 6px;
+                        }
+                    }
+                    & .receivingLabel {
+                        & .receivingStar {
+                        }
+                        & .withdrawalStar {
+                        }
+                    }
+                    & .receivingInput {
+                        &::placeholder {
+                        }
+                    }
+                    & .networkFee {
+                        font-size: 8px;
+                    }
+                    & .inputdata {
+                        & .forgotPassword {
+                        }
+                        & a {
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .disclaimerModal {
+        & .disclaimerdialog {
+            max-width: 100%;
+            & .disclaimerHeader {
+                & .closebtn {
+                }
+            }
+            & .disclaimerBody {
+            }
+        }
+    }
+    // bank modal end 
+
+    // games page start 
+    .gamesPage {
+        padding: 20px 11px 44px;
+        & .gamesHeading {
+            font-size: 12px;
+            & .gamesHeadingIcon {
+                height: 15px;
+                width: 15px;
+            }
+        }
+        & .gamesHeroSection {
+            & .gamesHeader {
+                padding: 12px 0;
+                & .Hacksaw {
+                    font-size: 6px;
+                    padding: 4px 12px;
+                }
+                & .bookmarkIcon {
+                    height: 14px;
+                }
+                & .demomode {
+                    & .demomodeLabel {
+                        font-size: 10px;
+                    }
+                }
+            }
+            & .provablyfairCard {
+                height: 34px;
+                width: 107px;
+                & .verifiedMain {
+                    & .verifiedIcon {
+                        height:18px;
+                        width: 18px;
+                    }
+                }
+            }
+            & .verifiedTitle {
+                font-size: 6px;
+            }
+        }
+        & .sliderButton {
+            top: -4px !important;
+        }
+        & .viewAll {
+            font-size: 10px;
+            padding-right: 70px;
+        }
+        & .providerSection {
+            padding-top: 40px;
+            & .providerCard {
+                padding: 8px 10px;
+                height: 50px;
+                & .providerImg {
+                }
+            }
+        }
+    }
+    // games page end 
+
+    // result page start 
+    .resultpage {
+        padding: 20px 11px 25px;
+        & .searchGameCardWrapper {
+            & >* {
+                flex: 0 0 25%;
+                width: 25%;
+            }
+        }
+        & .resultHeading {
+            font-size: 13px;
+        }
+        & .resultsearch {
+            width: 180px;
+            height: 30px;
+            & .resultInput {
+                font-size: 10px;
+                &::placeholder {
+                    font-size: 10px;
+                }
+            }
+            & .resultsearchBtn {
+                height: 8px;
+                width: 8px;
+            }
+        }
+        & .resultdropdown {
+            & .providerName {
+                font-size: 9px;
+                &.providerbutton {
+                }
+            }
+            & .providerMenu {
+                & .btninner {
+                    &:hover {
+                    }
+                }
+            }
+        }
+        & .loadmoremain {
+            padding-top: 20px;
+            & .loadmorebtn {
+                &:hover {
+                }
+            }
+        }
+    }
+    // result page end
+
+    // policy page start
+    .policypage {
+        padding: 38px 11px 50px;
+        & .policyHeading {
+            font-size: 15px;
+        }
+        & .policyDate {
+            font-size: 13px;
+        }
+        & .policysubHeading {
+            font-size: 14px;
+        }
+        & .policyDetail {
+            font-size: 10px;
+        }
+        & .policyLink {
+            font-size: 10px;
+        }
+        & .policymain {
+            gap: 30px;
+            & .policyInner {
+                gap: 15px;
+            }
+            & ul {
+                padding-left: 20px;
+            }
+        }
+
+    }
+    // policy page end
+
+    // transaction modal start 
+    .transactionModal {
+        & .transactionDialog {
+            max-width: 100%;
+            & .transactionContent {
+                & .transactionHeader {
+                    padding: 10px 15px 15px ;
+                    & .transactionTitle {
+                        font-size: 16px;
+                    }
+                    & .btn-close {
+                    }
+                }
+                & .transactionBody {
+                    padding: 10px 15px 30px ;
+                    & .inputdata {
+                        gap: 20px;
+                        & .inputlogin {
+                            // height: 40px;
+                        }
+                    }
+                    & .filechooseLabel {
+                        height: 80px;
+                        width: 80px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    // transaction modal end 
+
+    // message offcanvas start 
+    .msgoffcanvas {
+        max-width: 100%;
+        & .msgHeader {
+            & .msgImg {
+                & .msgicon {
+                }
+            }
+            & .chatrules {
+            }
+            & .offcanvasclose {
+            }
+            & .closebtn {
+            }
+        }
+        & .msgBody {
+            & .msgContent {
+                & .msgBtn {
+                    & .userimg {
+                        height: 25px;
+                        min-height: 25px;
+                        max-height: 25px;
+                        width: 25px;
+                        min-width: 25px;
+                        max-width: 25px;
+                    }
+                    & .username {
+                    }
+                    & .usermsg {
+                    }
+                }
+            }
+        }
+        & .offcanvasFooter {
+            & .InputMain {
+                & .sendInput {
+                    &::placeholder {
+                    }
+                }
+                & .smileFace {
+                }
+                & .sendBtn {
+                    & .sendImg {
+                    }
+                }
+            }
+        }
+    }
+    .chatrulescard {
+        & .chatHeading {
+        }
+        & .ruleMenu {
+            & .rules {
+            }
+        }
+    }
+    // message offcanvas end 
+
+    // chat rules modal start 
+    .rulesmodal {
+        & .rulesDialog {
+            max-width: 100%;
+            & .rulesheader {
+                & .closebtn {
+
+                }
+            }
+            & .rulebody {
+            }
+        }
+    }
+    // chat rules modal end
+}
