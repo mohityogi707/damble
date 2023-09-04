@@ -118,7 +118,7 @@
                     position: absolute;
                     inset: 0;
                     margin: auto;
-                    background-image:url(../Img/loginBgShap.svg);
+                    background-image:url(../img/loginBgShap.svg);
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: bottom right;
@@ -724,7 +724,7 @@
                             right: 14px;
                             height: 15px;
                             width: 8px;
-                            background: url(../Img/sidebar/rightarrow.png) no-repeat;
+                            background: url(../img/sidebar/rightarrow.png) no-repeat;
                             background-position: center;
                             background-size:cover;
                             border: none;
@@ -734,7 +734,7 @@
                             &::after {
                                 width: 15px;
                                 height: 8px;
-                                background: url(../Img/sidebar/downarrow.png) no-repeat;
+                                background: url(../img/sidebar/downarrow.png) no-repeat;
                                 background-position: center;
                                 background-size:cover;
                             }
@@ -893,7 +893,7 @@
                             right: 10px;
                             height: 7px;
                             width: 13px;
-                            background: url(../Img/sidebar/downarrow.png) no-repeat;
+                            background: url(../img/sidebar/downarrow.png) no-repeat;
                             background-size: cover;
                             background-position: center;
                             border: none;
@@ -1225,7 +1225,7 @@
                     border:1px solid #272B36;
                     padding: 2px;
                     &:checked {
-                        background-image:url(../Img/sidebar/check.png) ;
+                        background-image:url(../img/sidebar/check.png) ;
                         background-position: center;
                         background-size: 11px;
                         background-repeat: no-repeat;
